@@ -1,4 +1,5 @@
-﻿using AutoCarApp.Domain.Entities;
+﻿using AutoCarApp.Application.Interfaces;
+using AutoCarApp.Domain.Entities;
 using AutoCarApp.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AutoCarApp.Application
 {
-    public class AutoDrivingCarService
+    public class AutoDrivingCarService : IAutoDrivingCarService
     {
         public void SimulateAutoDrivingCar(int width, int height, Position initialPosition, string commands)
         {
