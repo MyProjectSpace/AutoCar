@@ -11,6 +11,13 @@ namespace AutoCarApp.Application
 {
     public class AutoDrivingCarService : IAutoDrivingCarService
     {
+        private readonly IOutput console;
+
+        public AutoDrivingCarService(IOutput consoleOutput)
+        {
+            this.console = consoleOutput;
+        }
+
         public void SimulateAutoDrivingCar(int width, int height, Position initialPosition, string commands)
         {
             var car = new AutoDrivingCar(width, height, initialPosition);
@@ -18,7 +25,7 @@ namespace AutoCarApp.Application
 
             // Display the final position and direction
             var (x, y, direction) = car.Position;
-            Console.WriteLine($"{x} {y} {direction}");
+            console.ShowMessage($"{x} {y} {direction}");
         }
     }
 }

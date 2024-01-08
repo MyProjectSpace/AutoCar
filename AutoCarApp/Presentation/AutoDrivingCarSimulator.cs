@@ -12,19 +12,21 @@ namespace AutoCarApp.Presentation
     {
         private readonly IUserInput userInput;
         private readonly IAutoDrivingCarService autoDrivingCarService;
+        private readonly IOutput console;
 
-        public AutoDrivingCarSimulator(IUserInput userInput, IAutoDrivingCarService autoDrivingCarService)
+        public AutoDrivingCarSimulator(IUserInput userInput, IAutoDrivingCarService autoDrivingCarService, IOutput console)
         {
             this.userInput =  userInput ?? throw new ArgumentNullException(nameof(userInput));
             this.autoDrivingCarService = autoDrivingCarService ?? throw new ArgumentNullException(nameof(autoDrivingCarService));
+            this.console = console ?? throw new ArgumentNullException(nameof(console));
         }
 
         public void RunSimulation()
         {
-            Console.WriteLine("Enter width and height of the field in integer");
+            console.ShowMessage("Enter width and height of the field in integer");
             int width = userInput.GetValidIntegerInput("Enter width: ");
             int height = userInput.GetValidIntegerInput("Enter height: ");
-            Console.WriteLine("Enter initial positon in X and Y coordinates");
+            console.ShowMessage("Enter initial positon in X and Y coordinates");
             int xCordinate = userInput.GetValidIntegerInput("Enter X cordinate: ");
             int yCordinate = userInput.GetValidIntegerInput("Enter Y cordinate: ");
             var direction = userInput.GetValidDirection();
