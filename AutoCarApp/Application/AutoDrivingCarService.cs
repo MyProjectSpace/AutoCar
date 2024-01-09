@@ -25,7 +25,7 @@ namespace AutoCarApp.Application
 
             // Display the final position and direction
             var (x, y, direction) = car.Position;
-            console.ShowMessage($"{x} {y} {direction}");
+            console.ShowMessage($"{x} {y} {direction.ToUpper()}");
         }
     }
 }
