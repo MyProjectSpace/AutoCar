@@ -23,10 +23,10 @@ namespace AutoCarApp.Presentation
 
         public void RunSimulation()
         {
-            console.ShowMessage("Enter width and height of the field in integer");
+            console.ShowNewLineMessage("Enter width and height of the field in integer");
             int width = userInput.GetValidIntegerInput("Enter width: ");
             int height = userInput.GetValidIntegerInput("Enter height: ");
-            console.ShowMessage("Enter initial positon in X and Y coordinates");
+            console.ShowNewLineMessage("Enter initial positon in X and Y coordinates");
             int xCordinate = userInput.GetValidIntegerInput("Enter X cordinate: ");
             int yCordinate = userInput.GetValidIntegerInput("Enter Y cordinate: ");
             var direction = userInput.GetValidDirection();

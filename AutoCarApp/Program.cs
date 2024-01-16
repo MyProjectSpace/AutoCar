@@ -8,8 +8,9 @@ var builder = new HostBuilder()
     .ConfigureServices((hostContext, services) =>
     {
         // Register services
-        services.AddSingleton<IUserInput, ConsoleInput>(); 
+        services.AddSingleton<IUserInput, ConsoleUserInput>(); 
         services.AddSingleton<IOutput, ConsoleOutput>();
+        services.AddSingleton<IInput, ConsoleInput>();
         services.AddSingleton<IAutoDrivingCarService, AutoDrivingCarService>();
         services.AddScoped<AutoDrivingCarSimulator>();
     });

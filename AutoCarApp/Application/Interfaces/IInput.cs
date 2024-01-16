@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AutoCarApp.Application.Interfaces
 {
-    public interface IOutput
+    public interface IInput
     {
-        void ShowNewLineMessage(string message);
-        void ShowMessage(string message);
+        char ReadKey();
+        string ReadString();
     }
 }

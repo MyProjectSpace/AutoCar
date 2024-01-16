@@ -27,7 +27,7 @@ namespace AutoCarAppTest
             autoDrivingCarService.SimulateAutoDrivingCar(width, height, initialPosition, commands);
 
             // Assert
-            consoleMock.Verify(c => c.ShowMessage($"2 4 N"), Times.Once);
+            consoleMock.Verify(c => c.ShowNewLineMessage($"2 4 N"), Times.Once);
         }
 
     }

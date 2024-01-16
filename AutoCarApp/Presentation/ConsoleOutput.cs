@@ -11,6 +11,11 @@ namespace AutoCarApp.Presentation
     {
         public void ShowMessage(string message)
         {
+            Console.Write(message);
+        }
+
+        public void ShowNewLineMessage(string message)
+        {
             Console.WriteLine(message);
         }
     }
