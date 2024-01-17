@@ -61,7 +61,7 @@ namespace AutoCarApp.Presentation
             do
             {
                 consoleOutput.ShowMessage(message);
-                isValid = int.TryParse(Console.ReadLine(), out value);
+                isValid = int.TryParse(consoleInput.ReadString(), out value);
 
                 if (!isValid)
                 {
