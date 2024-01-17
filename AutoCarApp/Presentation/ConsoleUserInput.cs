@@ -73,7 +73,7 @@ namespace AutoCarApp.Presentation
             return value;
         }
 
-        bool IsValidDirection(char direction)
+        private bool IsValidDirection(char direction)
         {
             if (direction == 'N' || direction == 'n' || direction == 'S' || direction == 's' || direction == 'E' || direction == 'e' || direction == 'W' || direction == 'w')
             {
