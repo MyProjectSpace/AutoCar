@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/AutoCarApp/.vs/AutoCarApp
+/.vs/AutoCarApp/v17/.suo
+/AutoCarApp/obj
+/AutoCarAppTest/obj
+/.vs/AutoCarApp
+/AutoCarApp/bin/Debug/net7.0
+/AutoCarAppTest/bin/Debug/net7.0
+/.vs/ProjectEvaluation
