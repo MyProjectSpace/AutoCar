@@ -18,6 +18,11 @@ namespace AutoCarApp.Presentation
             this.consoleInput = consoleInput;
         }
 
+        /// <summary>
+        /// The method handles user input commands check if the entered commands are valid.
+        /// If invalid error message will be displayed and if valid entered commands will be returned.
+        /// </summary>
+        /// <returns>Return valid command.</returns>
         public string GetValidCommands()
         {
             string command;
@@ -35,6 +40,11 @@ namespace AutoCarApp.Presentation
             return command;
         }
 
+        /// <summary>
+        /// The method validates if the entered char value is a valid direction.
+        /// If the direction is invalid an error message will be displayed. If it's correct it will be returned.
+        /// </summary>
+        /// <returns></returns>
         public char GetValidDirection()
         {
             char value;
@@ -53,6 +63,12 @@ namespace AutoCarApp.Presentation
             return value;
         }
 
+        /// <summary>
+        /// The method validates if user entered a valid integer.
+        /// If it is invalid it shows an error message. If it is valid it will return valid integer.
+        /// </summary>
+        /// <param name="message">Instruction message that should be shown</param>
+        /// <returns>Valid integer value.</returns>
         public int GetValidIntegerInput(string message)
         {
             int value;
